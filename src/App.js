@@ -12,7 +12,6 @@ class App extends React.Component {
     movies: []
   };
 
-  //Axios의 기능중 하나인 async은 호출되기 전에 사용되지 않도록 재워두는 것이다.
   GetMovies = async () => {
     //Axios를 이용해 API를 받아옴
     const { data:  { data: { movies }} } = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
